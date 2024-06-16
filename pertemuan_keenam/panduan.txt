@@ -1,0 +1,13 @@
+sesi 6 cuiuniversity
+-javscript logic
+- javascript manupulasi element
+-css styling
+
+studi kasus:
+1. fixed bootom navigation bar
+2.dark mode classlist (css javascript)
+3. dark mode counter
+
+tugas
+1. tulisan mode diganti jadi mode dark / mode light❌
+2.tambahkan mode lain pada navbar❌

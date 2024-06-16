@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>show video</title>
+
+    <style>
+      *,
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        max-width: 800px;
+        margin: auto;
+        position: relative;
+      }
+      video {
+        display: block;
+        width: 100%;
+      }
+
+      .video-component {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 10px;
+      }
+      .btn {
+        border: none;
+        font-weight: 800;
+        cursor: pointer;
+        margin: 2px;
+        padding: 10px;
+        font-size: 12px;
+        border-radius: 8px;
+      }
+      .btn-play {
+        background-color: crimson;
+        color: white;
+      }
+      .btn-minimize {
+        background-color: #222222;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <video src="./assets/video/footage.mp4" width="720"></video>
+      <div class="video-component">
+        <button onclick="play()" class="btn btn-play">play</button>
+        <button onclick="pause()" class="btn btn-pause">pause</button>
+        <button onclick="minimize()" class="btn btn-minimize">minimize</button>
+        <button onclick="fullscreen()" class="btn btn-minimize">
+          fullscreen
+        </button>
+      </div>
+    </div>
+  </body>
+  <script>
+    const videoComponent = document.querySelector("video");
+    function play() {
+      videoComponent.play();
+      console.log("anda mengklik tombol play");
+    }
+    function pause() {
+      videoComponent.pause();
+      console.log("anda mengklik tombol pause");
+    }
+    function minimize() {
+      videoComponent.requestPictureInPicture();
+      console.log("anda mengklik tombol minimize");
+    }
+    function fullscreen() {
+      videoComponent.requestFullscreen();
+      console.log("anda mengklik tombol fullscreen");
+    }
+  </script>
+</html>

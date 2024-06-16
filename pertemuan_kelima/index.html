@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>website</title>
+  </head>
+  <body>
+    <!-- content -->
+    <div id="root">
+      <div class="container">
+        <div class="content-container">
+          <div class="hero-section">
+            <h2 class="text-title" id="navbar">LOGIN</h2>
+          </div>
+          <div class="form-login">
+            <input
+              type="text"
+              placeholder="full name"
+              name="fullName"
+              id="fullname"
+              required
+            />
+            <input
+              type="email"
+              placeholder="email"
+              name="email"
+              id="email"
+              required
+            />
+            <input
+              type="text"
+              placeholder="username"
+              name="username"
+              id="username"
+              required
+            />
+            <input
+              type="password"
+              placeholder="password"
+              name="password"
+              id="password"
+              required
+            />
+            <button onclick="onLogin()" id="tombolLogin">LOGIN</button>
+            <button onclick="onLogout()" id="tombolLogout">Logout</button>
+            <br />
+            <p id="text-p">anda belum punya akun?</p>
+            <button
+              class="link-register"
+              id="registerLink"
+              onclick="registerForm()"
+            >
+              buat akun sekarang
+            </button>
+          </div>
+          <div class="main-content">
+            <div class="admin-view" id="adminView">
+              <br />
+              <h3>selamat datang di dashboard</h3>
+              <br />
+              <h1>anda login sebagai admin</h1>
+            </div>
+            <div class="user-view" id="userView">
+              <br />
+              <h3>selamat datang di dashboard</h3>
+              <br />
+              <h1>anda login sebagai user</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
